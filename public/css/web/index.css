@@ -1,0 +1,166 @@
+body{
+    background-color: white;
+    text-align: right;
+    direction: rtl;
+}
+.backgroundwhite {
+    background-color: white;
+}
+
+.backgroundblack {
+    background-color: black;
+}
+.text {
+    /*min-width: 4rem;*/
+    /*max-width: 8.53rem;*/
+    margin: 1rem 0.43rem 0 0.43rem;
+    /*margin: 0 auto;*/
+    position: relative;
+}
+
+.text_header {
+    /*width: 95%;*/
+
+    padding-bottom: 0.43rem;
+}
+
+.text_header .title {
+    font-size: 0.64rem;
+    line-height: 0.83rem;
+    color: #222328;
+    font-weight: bolder;
+}
+
+.text_header .gongju {
+    font-family: "Microsoft YaHei",sans-serif;
+    color: #A1A6BB;
+    font-size: 0.38rem;
+    margin-top: 0.32rem;
+    padding-bottom: 0.43rem;
+/*    border-bottom: 1pt solid #E4E7F0; */
+}
+
+.text_header .gongju .laiyuan {
+    margin-left: 0.43rem;
+}
+
+.text_header .gongju img {
+    /*height: 46px;*/
+    width: 0.32rem;
+    height: 0.32rem;
+    text-align: center;
+    vertical-align: middle;
+    /*height: 33px;*/
+    /*text-align: center;*/
+    /*margin-top:12pt;*/
+    /*height: 32pt;*/
+}
+
+.text_content {
+    /*width: 95%;*/
+    /*margin: 0 auto;*/
+    /*margin: 0 0.43rem;*/
+    display: block;
+    font-size: 0.47rem;
+    line-height: 0.64rem;
+    color: #646978;
+}
+
+.text_content .datu {
+    display: block;
+    font-family: Helvetica;
+    /*width: 100%;*/
+    /*display: inline-block;*/
+    /*margin: 0.43rem;*/
+    /*padding: 0.43rem;*/
+    /*width: 92%;*/
+    width: 100%;
+    margin: 0.43rem auto;
+}
+
+.text_content .content4 {
+    margin-bottom: 0.32rem;
+}
+
+.text_content .wailian {
+    display: block;
+    /*margin-top: 24px;*/
+    /*margin-bottom: 100px;*/
+    padding-bottom: 2.3rem;
+    font-size: 0.43rem;
+    color: #3E84E0;
+    text-decoration: underline;
+    /*margin-right: 0.43rem;*/
+}
+
+.tuijian {
+    /*display: inline;*/
+    /*min-width: 4rem;*/
+    /*max-width: 8.53rem;*/
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 1.49rem;
+    background-color: #FAFAFA;
+
+    border-top: 1px solid #FAFAFA;
+}
+
+.tuijian p {
+    display: inline-block;
+}
+
+.tuijian .tiaozhuan {
+
+    display: block;
+    font-size: 0.533rem;
+
+    border-radius: 0.133rem;
+    position: absolute;
+    top: 0.32rem;
+    left: 0.43rem;
+    /*margin-left: 0.43rem;*/
+    /*margin-top: 0.28rem;*/
+    text-align: center;
+
+    width: 2.56rem;
+    height: 0.85rem;
+    line-height: 0.85rem;
+    font-weight: bolder;
+    background-color: #3E84E0;
+    color: #FFFFFF;
+}
+
+.tuijian .logo {
+    width: 0.85rem;
+    height: 0.85rem;
+    /*float: right;*/
+    position: absolute;
+    top: 0.32rem;
+    right: 0.43rem;
+}
+
+
+.tuijian .biaoti {
+    /*float: right;*/
+    position: absolute;
+    top: 0.133rem;
+    right: 1.44rem;
+    font-size: 0.48rem;
+    color: #333;
+}
+
+.tuijian .slogan {
+    position: absolute;
+    bottom: 0.187rem;
+    right: 1.48rem;
+    font-size: 0.293rem;
+    color: #666;
+}
+/*.tuijian hr {*/
+    /*height: 1px;*/
+    /*!*margin-left: -5px;*!*/
+    /*!*margin-top: 2pt;*!*/
+    /*color: rgba(241, 241, 241, 0.04);*/
+    /*!*box-shadow: 0 -0.5pt 0 #000 ;*!*/
+/*}*/

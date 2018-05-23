@@ -1,0 +1,80 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+
+    -webkit-tap-highlight-color: transparent;/*清除点击默认的高亮效果*/
+
+    -webkit-box-sizing: border-box;/*以你的border开始计算你的宽度*/
+
+}
+
+body{
+    font-size: 37.5px;
+    /*font-family: "Microsoft YaHei",sans-serif;!*第二个是手机的一个默认的字体*!*/
+    color: #000;
+}
+
+@media (min-width: 320px){html{font-size: 32px;} }
+@media (min-width: 360px){html{font-size: 36px;} }
+@media (min-width: 375px){html{font-size: 37.5px;} }
+@media (min-width: 384px){html{font-size: 38.5px;} }
+@media (min-width: 414px){html{font-size: 41.4px;} }
+@media (min-width: 448px){html{font-size: 44.8px;} }
+@media (min-width: 480px){html{font-size: 48px;} }
+@media (min-width: 512px){html{font-size: 51.2px;} }
+@media (min-width: 544px){html{font-size: 54.4px;} }
+@media (min-width: 576px){html{font-size: 57.6px;} }
+@media (min-width: 608px){html{font-size: 60.8px;} }
+@media (min-width: 640px){html{font-size: 64px;} }
+@media (min-width: 750px){html{font-size: 75px;} }
+@media (min-width: 800px){html{font-size: 80px;} }
+@media (min-width: 1024px){html{font-size: 102.4px;} }
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+ul{
+    list-style: none;
+}
+
+input,textarea{
+    border: none;
+    resize: none;
+    outline: none;/*清除选中效果*/
+
+    -webkit-appearance: none;/*清楚浏览器默认的样式*/
+}
+
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after{
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+
+@font-face {
+    font-family: Al-Jazeera-Arabic;
+    src: url('http://src.mysada.com/faq/file/TTF/jazeera-light.TTF');
+}
+
+.fontFamily {
+    font-family: Al-Jazeera-Arabic;
+}
+
+@font-face {
+    font-family: Al-Jazeera-Arabic-Bold;
+    src: url('http://src.mysada.com/faq/file/TTF/jazeera.TTF');
+}
+
+.fontFamilyBold {
+    font-family: Al-Jazeera-Arabic-Bold;
+}
