@@ -21,6 +21,6 @@ Route::group(['middleware' => ['auth:api']], function () {
 
 Route::group(['middleware' => ['start','end']], function () {
 	//检查版本
-	Route::get('/checkAppVersion','Api\VersionController@getInfo');
+	// Route::get('/checkAppVersion','Api\VersionController@getInfo');
 });
 

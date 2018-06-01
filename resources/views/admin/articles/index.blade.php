@@ -5,7 +5,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                应用列表
+                新闻列表
                 <small>comics list</small>
             </h1>
             <ol class="breadcrumb">
@@ -22,10 +22,7 @@
 
                     <div class="box box-primary">
                         <div class="box-header">
-                            <h3 class="box-title">应用列表</h3>
-                            <div style="float:right;margin-right:30px">
-                                <a href="/admin/apps/create" class="btn btn-block btn-success" role="button">添加应用</a>
-                            </div>
+                            <h3 class="box-title">新闻列表</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body table-responsive">
                             @if (session('error'))
@@ -42,42 +39,39 @@
                                 <thead>
                                     <tr>
                                         <th>id</th>
-                                        <th>应用名</th>
-                                        <th>APP_KEY</th>
-                                        <th>创建时间</th>
+                                        <th>标题</th>
+                                        <th>特色图片</th>
+                                        <th>分享赠币</th>
+                                        <th>创建时间(GMT)</th>
                                         <th>操作</th>
                                     </tr>  
                                 </thead>  
                                 <tbody>
-                                @foreach($apps as $val)
+                                @foreach($articles as $val)
                                     <tr>
                                         <td>{{ $val->id }}</td>
-                                        <td>{{ $val->name }}</td>
-                                        <td>{{ $val->app_key }}</td>
-                                        <td>{{ date('Y-m-d H:i:s',$val->create_time) }}</td>
+                                        <td>{{ $val->title }}</td>
+                                        <td><img src="{{ $val->pic_listpage }}" width="50px;"></td>
                                         <td>
-                                        <div style="float:left">
-                                            <div style="float:left;margin-right:15px">
-                                                <a href="/admin/version?app_id={{ $val->id }}" class="btn btn-block btn-primary" role="button">查看版本列表</a>
+                                            @if($val->is_open_mine == 1)
+                                                <font style="color:red;">已开启</font>
+                                            @else
+                                                <font>未开启</font>
+                                            @endif
+                                        </td>
+                                        <td>{{ $val->post_date_gmt }}</td>
+                                        <td>
+                                            <div style="float:left">
+                                                <div style="float:left;margin-right:15px">
+                                                    <a href="/admin/news/{{ $val->id }}/edit" class="btn btn-block btn-primary" role="button">赠币设置</a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div style="float:left">
-                                            <div style="float:left;margin-right:15px">
-                                                <a href="/admin/apps/{{ $val->id }}/edit" class="btn btn-block btn-primary" role="button">{{ __('bookStore.edit') }}</a>
-                                            </div>
-                                        </div>
-                                        <div style="float:left;margin-right:15px">
-                                            <form action="/admin/apps/{{ $val->id }}" method="post">
-                                                {{ method_field('DELETE') }}
-                                                <input type="submit" name="del" class="btn btn-block btn-danger" value="{{ __('articles.delete') }}" onclick="return confirm('确定?');" />
-                                            </form>
-                                        </div>
-                                    </td>
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>  
                             </table>
-                            {{ $apps->links() }}
+                            {{ $articles->links() }}
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div>

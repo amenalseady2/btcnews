@@ -11,21 +11,25 @@
                     <i class="fa fa-github"></i> <span>{{ __('sideBar.adminManage') }}</span>
                 </a>
             </li>
-            <?php
-                $apps = DB::table('apps')->get();
-            ?>
-            <li @if( $sidebarPresenter->getModuleName() == 'apps' || $sidebarPresenter->getModuleName() == 'version') class="active" @endif>
-                <a href="/admin/apps">
-                    <i class="fa fa-gears"></i> <span>版本设置</span>
+            <li @if( $sidebarPresenter->getModuleName() == 'news') class="active" @endif>
+                <a href="/admin/news">
+                    <i class="fa fa-newspaper-o"></i> <span>新闻列表</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 
                 <ul class="treeview-menu">
-                    <li @if($sidebarPresenter->getPlate() == 'apps') class="active" @endif><a href="/admin/apps"><i class="fa fa-circle-o">应用列表</i></a></li>
-                    @foreach($apps as $val)
-                        <li @if($sidebarPresenter->getPlate() == 'version' && isset($_GET['app_id']) && $_GET['app_id'] == $val->id) class="active" @endif><a href="/admin/version?app_id={{$val->id}}">&nbsp;&nbsp;|->&nbsp;{{$val->name}}</i></a></li>
-                    @endforeach
+                    <li @if($sidebarPresenter->getPlate() == 'news') class="active" @endif><a href="/admin/news"><i class="fa fa-circle-o">新闻列表</i></a></li>
                 </ul>
+            </li>
+            <li  @if( $sidebarPresenter->getModuleName() == 'users') class="active" @endif>
+                <a href="/admin/users">
+                    <i class="fa fa-user"></i> <span>用户列表</span>
+                </a>
+            </li>
+            <li  @if( $sidebarPresenter->getModuleName() == 'mineConfig') class="active" @endif>
+                <a href="/admin/mineConfig">
+                    <i class="fa fa-gears"></i> <span>挖矿设置</span>
+                </a>
             </li>
             <li>
                 <a target="_blank" href="/log-viewer">

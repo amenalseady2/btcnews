@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Version - Control</title>
+    <title>BTCNEWS - ADMIN</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="/framework/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -39,7 +39,7 @@
     <div class="wrapper">
       
       <header class="main-header">
-        <a href="/adminUser" class="logo"><b>Version</b></a>
+        <a href="/admin/administrators/user" class="logo"><b>BTCNEWS</b></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->

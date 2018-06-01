@@ -24,14 +24,15 @@ Route::group(['middleware' => ['verifyAdminUser','langSet']], function () {
 	Route::resource('/admin/user/info', 'Admin\UserInfoController');
 	Route::get('/admin/user/usercountry', 'Admin\UserInfoController@userCountry');
 
-
-	//版本设置
-	Route::resource('/admin/version','Admin\VersionSetController');
-	Route::get('/admin/versions/versionEdit','Admin\VersionSetController@versionEdit');
-	Route::post('/admin/versions/versionUpdate','Admin\VersionSetController@versionUpdate');
-
+	Route::resource('/admin/news','Admin\NewsController');
+	Route::get('/admin/users','Admin\UsersController@index');
+	
+	//挖矿设置
+	Route::get('/admin/mineConfig','Admin\MineConfigController@index');
+	Route::post('/admin/mineConfig/update','Admin\MineConfigController@update');
+	
 	//应用设置
-	Route::resource('/admin/apps','Admin\AppsController');
+	// Route::resource('/admin/apps','Admin\AppsController');
 });
 
 
